@@ -4,9 +4,9 @@ To get [trickybestia/linux-discord-rich-presence](https://github.com/trickybesti
 ## Installation
 ```bash
 #!/bin/bash
-wget -O Container-DRPC_installer.sh https://raw.githubusercontent.com/vibrantleaf/container-linux-discord-rich-presence/refs/heads/main/install.sh
-chmod +x Container-DRPC_installer.sh
-./Cntainer-DRPC_installer.sh
+wget -O Container-LDRPC_installer.sh https://raw.githubusercontent.com/vibrantleaf/container-ldrpc/refs/heads/main/install.sh
+chmod +x Container-LDRPC_installer.sh
+./Cntainer-LDRPC_installer.sh
 ```
 
 ## Credits
