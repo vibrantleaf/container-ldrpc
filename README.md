@@ -1,5 +1,5 @@
 # Purpose
-To get [trickybestia/linux-discord-rich-presence](https://github.com/trickybestia/linux-discord-rich-presence/) working working on Atomic Linux Distributions via Distrobox/Podman
+To get [trickybestia/linux-discord-rich-presence](https://github.com/trickybestia/linux-discord-rich-presence/) working working on Atomic Linux Distributions Like Fedora Silverblue & SteamOS 3 via Distrobox
 
 ## Installation
 ```bash
