@@ -1,7 +1,7 @@
 #!/bin/bash
 set -xout pipefail
 
-distrobox create --image ghcr.io/vibrantleaf/container-linux-discord-rich-presence:latest --name linux-discord-rich-presence
+distrobox create --image ghcr.io/vibrantleaf/container-ldrpc:latest --name linux-discord-rich-presence
 distrobox-export --bin /usr/bin/linux-discord-rich-presence --export-path $HOME/.local/bin
 distrobox-export --bin /usr/bin/linux-discord-rich-presence-wrapper --export-path $HOME/.local/bin
 linux-discord-rich-presence -c ~/.config/linux-discord-rich-presencerc
