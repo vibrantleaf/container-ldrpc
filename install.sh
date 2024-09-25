@@ -1,6 +1,10 @@
 #!/bin/bash
 set -xout pipefail
 
+wget -O /tmp/container-ldrpc-cosign.pub https://raw.githubusercontent.com/vibrantleaf/container-ldrpc/refs/heads/main/cosign.pub
+cosign verify --key /tmp/ontainer-ldrp-cosign.pub  ghcr.io/vibrantleaf/container-ldrpc:latest
+rm /tmp/container-ldrpc-cosign.pub
+
 distrobox create --image ghcr.io/vibrantleaf/container-ldrpc:latest --name linux-discord-rich-presence
 distrobox-export --bin /usr/bin/linux-discord-rich-presence --export-path $HOME/.local/bin
 distrobox-export --bin /usr/bin/linux-discord-rich-presence-wrapper --export-path $HOME/.local/bin
