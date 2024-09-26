@@ -14,10 +14,16 @@ RUN git fetch --tags && git checkout $(git describe --tags "$(git rev-list --tag
 # build linux-discord-rich-pressence
 WORKDIR /linux-discord-rich-presence-src
 RUN cargo build --release
-RUN install -Dm0755 -t /usr/bin/ ./target/release/linux-discord-rich-presence
-RUN install -Dm0755 -t /usr/bin/ ./doc/linux-discord-rich-presence-desktop-wrapper
-RUN install -Dm0644 -t /usr/share/applications/ ./doc/linux-discord-rich-presence.desktop
-RUN install -Dm0644 -t /usr/share/applications/ ./doc/linux-discord-rich-presence-minimized.desktop
+RUN cp -fv /linux-discord-rich-presence-src/target/release/linux-discord-rich-presence /usr/bin/
+RUN cp -fv /linux-discord-rich-presence-src/doc/linux-discord-rich-presence-desktop-wrapper /usr/bin/
+RUN cp -fv /linux-discord-rich-presence-src/doc/linux-discord-rich-presence.desktop /usr/share/applications/ 
+RUN cp -fv /linux-discord-rich-presence-src/doc/linux-discord-rich-presence-minimized.desktop /usr/share/applications/
+RUN chmod 755 /usr/bin/linux-discord-rich-presence-desktop-wrapper  \
+  /usr/bin/linux-discord-rich-presence \
+  /usr/share/applications/linux-discord-rich-presence.desktop \
+  /usr/share/applications/linux-discord-rich-presence-minimized.desktop
+RUN chmod +x /usr/bin/linux-discord-rich-presence-desktop-wrapper  \
+  /usr/bin/linux-discord-rich-presence
 
 # clean up
 WORKDIR /
