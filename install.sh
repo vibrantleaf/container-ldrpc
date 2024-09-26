@@ -2,7 +2,7 @@
 set -xout pipefail
 
 wget -O /tmp/container-ldrpc-cosign.pub https://raw.githubusercontent.com/vibrantleaf/container-ldrpc/refs/heads/main/cosign.pub
-cosign verify --key /tmp/ontainer-ldrp-cosign.pub  ghcr.io/vibrantleaf/container-ldrpc:latest
+cosign verify --key /tmp/container-ldrp-cosign.pub  ghcr.io/vibrantleaf/container-ldrpc:latest
 rm /tmp/container-ldrpc-cosign.pub
 
 distrobox create --image ghcr.io/vibrantleaf/container-ldrpc:latest --name linux-discord-rich-presence
