@@ -23,6 +23,6 @@ RUN install -Dm0644 -t /usr/share/applications/ ./doc/linux-discord-rich-presenc
 WORKDIR /
 RUN rm -rf /linux-discord-rich-presence-src && \
  dnf remove git rust cargo clippy rustfmt -y && \
- dnf clean all -y \
- rm -rf /tmp/* \
+ dnf clean all -y && \
+ rm -rf /tmp/* && \
  rm -rf /var/cache/*
