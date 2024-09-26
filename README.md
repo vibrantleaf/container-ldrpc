@@ -6,7 +6,7 @@ To get [trickybestia/linux-discord-rich-presence](https://github.com/trickybesti
 #!/bin/bash
 wget -O Container-LDRPC_installer.sh https://raw.githubusercontent.com/vibrantleaf/container-ldrpc/refs/heads/main/install.sh
 chmod +x Container-LDRPC_installer.sh
-./Cntainer-LDRPC_installer.sh
+./Container-LDRPC_installer.sh
 ```
 
 ## Credits
